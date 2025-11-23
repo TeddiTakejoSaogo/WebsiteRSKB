@@ -38,7 +38,7 @@ class DoctorSchedule extends Model
 
     public function getTimeRangeAttribute()
     {
-        return $this->start_time . ' - ' . $this->end_time;
+        return date('H:i', strtotime($this->start_time)) . ' - ' . date('H:i', strtotime($this->end_time));
     }
 
     public function getDisplayScheduleAttribute()

@@ -13,14 +13,23 @@ class GalleryController extends Controller
         $this->middleware('auth')->except(['index']);
     }
 
-    // Public method
-    public function index()
+    // Public method dengan filter
+    public function index(Request $request)
     {
-        $galleries = Gallery::latest()->get();
-        return view('gallery', compact('galleries'));
+        $query = Gallery::latest();
+        
+        // Filter by type
+        if ($request->has('type') && $request->type != 'all') {
+            $query->where('type', $request->type);
+        }
+        
+        $galleries = $query->get();
+        $types = Gallery::select('type')->distinct()->get();
+        
+        return view('gallery', compact('galleries', 'types'));
     }
 
-    // Admin methods
+    // Admin methods tetap sama
     public function adminIndex()
     {
         $galleries = Gallery::latest()->get();
@@ -33,60 +42,63 @@ class GalleryController extends Controller
     }
 
     public function store(Request $request)
-{
-    $request->validate([
-        'title' => 'required|string|max:255',
-        'description' => 'nullable|string|max:500',
-        'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        'type' => 'required|in:facility,activity,event',
-    ], [
-        'title.required' => 'Judul foto wajib diisi',
-        'images.required' => 'Pilih minimal satu foto',
-        'images.*.image' => 'File harus berupa gambar',
-        'images.*.mimes' => 'Format gambar harus jpeg, png, jpg, atau gif',
-        'images.*.max' => 'Ukuran gambar maksimal 2MB',
-    ]);
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string|max:500',
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'type' => 'required|in:facility,activity,event',
+        ], [
+            'title.required' => 'Judul foto wajib diisi',
+            'images.required' => 'Pilih minimal satu foto',
+            'images.*.image' => 'File harus berupa gambar',
+            'images.*.mimes' => 'Format gambar harus jpeg, png, jpg, gif, atau webp',
+            'images.*.max' => 'Ukuran gambar maksimal 2MB',
+        ]);
 
-    try {
-        $uploadedCount = 0;
+        try {
+            $uploadedCount = 0;
 
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $imagePath = $image->store('gallery', 'public');
-                
-                Gallery::create([
-                    'title' => $request->title,
-                    'description' => $request->description,
-                    'image' => $imagePath,
-                    'type' => $request->type,
-                ]);
-                
-                $uploadedCount++;
+            if ($request->hasFile('images')) {
+                foreach ($request->file('images') as $image) {
+                    $imagePath = $image->store('gallery', 'public');
+                    
+                    Gallery::create([
+                        'title' => $request->title,
+                        'description' => $request->description,
+                        'image' => $imagePath,
+                        'type' => $request->type,
+                    ]);
+                    
+                    $uploadedCount++;
+                }
             }
+
+            $message = $uploadedCount . ' foto berhasil ditambahkan ke galeri.';
+            return redirect()->route('admin.gallery')->with('success', $message);
+
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->with('error', 'Terjadi kesalahan: ' . $e->getMessage())
+                ->withInput();
         }
-
-        $message = $uploadedCount . ' foto berhasil ditambahkan ke galeri.';
-        return redirect()->route('admin.gallery')->with('success', $message);
-
-    } catch (\Exception $e) {
-        \Log::error('Error creating gallery: ' . $e->getMessage());
-        return redirect()->back()
-            ->with('error', 'Terjadi kesalahan: ' . $e->getMessage())
-            ->withInput();
     }
-}
 
     public function destroy($id)
     {
-        $gallery = Gallery::findOrFail($id);
-        
-        // Delete image file
-        if ($gallery->image) {
-            Storage::disk('public')->delete($gallery->image);
-        }
-        
-        $gallery->delete();
+        try {
+            $gallery = Gallery::findOrFail($id);
+            
+            if ($gallery->image) {
+                Storage::disk('public')->delete($gallery->image);
+            }
+            
+            $gallery->delete();
 
-        return redirect()->route('admin.gallery')->with('success', 'Foto berhasil dihapus dari galeri.');
+            return redirect()->route('admin.gallery')->with('success', 'Foto berhasil dihapus dari galeri.');
+
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
+        }
     }
 }

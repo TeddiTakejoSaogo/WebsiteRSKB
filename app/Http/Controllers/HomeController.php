@@ -78,10 +78,7 @@ class HomeController extends Controller
     public function doctors()
     {
         $doctors = Doctor::with('schedules')->where('status', 'active')->get();
-        return view('doctors', [
-            'hospitalProfile' => $this->hospitalProfile,
-            'doctors' => $doctors
-        ]);
+        return view('doctors', compact('doctors'));
     }
 
     public function news()
@@ -103,14 +100,13 @@ class HomeController extends Controller
     }
 
     public function testimonials()
-    {
-        $testimonials = Testimonial::approved()->latest()->get();
-        return view('testimonials', [
-            'hospitalProfile' => $this->hospitalProfile,
-            'testimonials' => $testimonials
-        ]);
-    }
-
+{
+    $testimonials = Testimonial::approved()
+        ->latest()
+        ->paginate(10); // 10 testimoni per halaman
+    
+    return view('testimonials', compact('testimonials'));
+}
     public function contact()
     {
         return view('contact', ['hospitalProfile' => $this->hospitalProfile]);

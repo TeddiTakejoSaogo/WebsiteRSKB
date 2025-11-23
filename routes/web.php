@@ -93,6 +93,8 @@ Route::prefix('admin')->middleware(['auth', 'throttle:60,1'])->group(function ()
     Route::post('/contact-messages/{id}/replied', [ContactMessageController::class, 'markAsReplied'])->name('admin.contact-messages.replied');
 });
 
+// Public API Routes untuk doctors
+Route::get('/api/doctors/{id}', [DoctorController::class, 'getDoctorDetails'])->name('api.doctors.details');
 Auth::routes();
 
 // Fallback route

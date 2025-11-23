@@ -41,9 +41,9 @@ class Article extends Model
         return $query->where('status', 'published');
     }
 
-    public function getExcerptAttribute()
+    public function getExcerptAttribute($length = 150)
     {
-        return Str::limit(strip_tags($this->content), 150);
+        return Str::limit(strip_tags($this->content), $length);
     }
 
     public function getImageUrlAttribute()
@@ -57,7 +57,6 @@ class Article extends Model
     public function getReadingTimeAttribute()
     {
         $wordCount = str_word_count(strip_tags($this->content));
-        $minutes = ceil($wordCount / 200); // Average reading speed: 200 words per minute
-        return $minutes . ' min read';
+        return ceil($wordCount / 200); // Average reading speed: 200 words per minute
     }
 }

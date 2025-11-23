@@ -267,6 +267,39 @@ class DoctorController extends Controller
             return redirect()->back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
         }
     }
+    public function getDoctorDetails($id)
+{
+    try {
+        $doctor = Doctor::with('schedules')->findOrFail($id);
+        
+        return response()->json([
+            'success' => true,
+            'data' => [
+                'id' => $doctor->id,
+                'name' => $doctor->name,
+                'specialization' => $doctor->specialization,
+                'education' => $doctor->education,
+                'description' => $doctor->description,
+                'experience' => $doctor->experience,
+                'photo' => $doctor->photo ? asset('storage/' . $doctor->photo) : 'https://via.placeholder.com/200x200?text=No+Image',
+                'schedules' => $doctor->schedules->map(function($schedule) {
+                    return [
+                        'day_name' => $schedule->day_name,
+                        'time_range' => $schedule->time_range,
+                    ];
+                })
+            ]
+        ]);
+        
+    } catch (\Exception $e) {
+        Log::error('Error getting doctor details: ' . $e->getMessage());
+        
+        return response()->json([
+            'success' => false,
+            'message' => 'Data dokter tidak ditemukan.'
+        ], 404);
+    }
+}
 
     /**
      * Display the specified resource.
