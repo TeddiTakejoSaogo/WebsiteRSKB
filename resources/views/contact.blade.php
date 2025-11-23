@@ -22,9 +22,9 @@
                     </div>
                     <h5>Alamat</h5>
                     <p class="text-muted">
-                        Jl. Kesehatan No. 123<br>
-                        Jakarta Pusat 10110<br>
-                        DKI Jakarta, Indonesia
+                       Jl. Aur No.8, Ujung Gurun <br>
+                    Kec. Padang Bar.,<br> 
+                    Kota Padang, Sumatera Barat 25142
                     </p>
                 </div>
             </div>
@@ -208,7 +208,7 @@
                                 @if(isset($hospitalProfile))
                                     {{ $hospitalProfile->address }}
                                 @else
-                                    Jl. Kesehatan No. 123, Jakarta Pusat 10110
+                                    Jl. Aur No.8, Ujung Gurun, Kec. Padang Bar., Kota Padang, Sumatera Barat 25142
                                 @endif
                             </p>
                         </div>
