@@ -75,10 +75,33 @@ class HomeController extends Controller
         ]);
     }
 
-    public function doctors()
+    public function doctors(Request $request)
     {
-        $doctors = Doctor::with('schedules')->where('status', 'active')->get();
-        return view('doctors', compact('doctors'));
+        $query = Doctor::with('schedules')->where('status', 'active');
+        
+        // Search functionality
+        if ($request->has('search') && !empty($request->search)) {
+            $searchTerm = $request->search;
+            $query->where(function($q) use ($searchTerm) {
+                $q->where('name', 'like', '%' . $searchTerm . '%')
+                  ->orWhere('specialization', 'like', '%' . $searchTerm . '%')
+                  ->orWhere('education', 'like', '%' . $searchTerm . '%');
+            });
+        }
+
+        // Filter by specialization
+        if ($request->has('specialization') && !empty($request->specialization)) {
+            $query->where('specialization', $request->specialization);
+        }
+
+        $doctors = $query->get();
+        $specializations = Doctor::where('status', 'active')
+            ->distinct()
+            ->pluck('specialization')
+            ->filter()
+            ->values();
+
+        return view('doctors', compact('doctors', 'specializations'));
     }
 
     public function news()

@@ -1,4 +1,4 @@
-\@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Testimoni Pasien')
 
@@ -239,7 +239,7 @@
                     <div class="alert alert-info">
                         <small>
                             <i class="fas fa-info-circle me-2"></i>
-                            Testimoni Anda akan ditampilkan setelah disetujui oleh admin. Terima kasih atas kontribusinya!
+                            Testimoni Anda akan ditampilkan. Terima kasih atas kontribusinya!
                         </small>
                     </div>
                 </form>
@@ -296,7 +296,7 @@
 }
 
 .bg-gradient-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background: linear-gradient(135deg, #098652 0%, #108379 100%) !important;
 }
 
 /* Rating Input Styles */
@@ -339,7 +339,7 @@
 }
 
 .pagination .page-item.active .page-link {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #eef0ef 0%, #ffffff 100%);
     border: none;
 }
 
