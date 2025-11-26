@@ -34,7 +34,7 @@ class AdminController extends Controller
 
         // Recent data for quick overview
         $recentDoctors = Doctor::with('schedules')->latest()->limit(3)->get();
-        $recentTestimonials = Testimonial::with('doctor')->latest()->limit(3)->get();
+        $recentTestimonials = Testimonial::latest()->limit(3)->get();
         $recentArticles = Article::latest()->limit(3)->get();
 
         return view('admin.dashboard', compact(

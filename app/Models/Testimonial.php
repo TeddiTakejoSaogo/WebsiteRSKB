@@ -18,11 +18,6 @@ class Testimonial extends Model
         'doctor_id'
     ];
 
-    public function doctor()
-    {
-        return $this->belongsTo(Doctor::class);
-    }
-
     public function scopeApproved($query)
     {
         return $query->where('status', 'approved');
@@ -31,6 +26,33 @@ class Testimonial extends Model
     public function scopePending($query)
     {
         return $query->where('status', 'pending');
+    }
+
+    public function scopeRejected($query)
+    {
+        return $query->where('status', 'rejected');
+    }
+
+    public function getStatusBadgeAttribute()
+    {
+        $statuses = [
+            'pending' => 'bg-warning',
+            'approved' => 'bg-success', 
+            'rejected' => 'bg-danger'
+        ];
+
+        return $statuses[$this->status] ?? 'bg-secondary';
+    }
+
+    public function getStatusTextAttribute()
+    {
+        $statuses = [
+            'pending' => 'Menunggu',
+            'approved' => 'Disetujui',
+            'rejected' => 'Ditolak'
+        ];
+
+        return $statuses[$this->status] ?? 'Tidak Diketahui';
     }
 
     public function getStarsAttribute()

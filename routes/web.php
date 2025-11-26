@@ -91,6 +91,12 @@ Route::prefix('admin')->middleware(['auth', 'throttle:60,1'])->group(function ()
     Route::put('/contact-messages/{id}', [ContactMessageController::class, 'update'])->name('admin.contact-messages.update');
     Route::delete('/contact-messages/{id}', [ContactMessageController::class, 'destroy'])->name('admin.contact-messages.destroy');
     Route::post('/contact-messages/{id}/replied', [ContactMessageController::class, 'markAsReplied'])->name('admin.contact-messages.replied');
+    // Testimonials Management
+    Route::get('/testimonials', [TestimonialController::class, 'adminIndex'])->name('admin.testimonials');
+    Route::post('/testimonials/{id}/approve', [TestimonialController::class, 'approve'])->name('admin.testimonials.approve');
+    Route::post('/testimonials/{id}/reject', [TestimonialController::class, 'reject'])->name('admin.testimonials.reject');
+    Route::post('/testimonials/{id}/restore', [TestimonialController::class, 'restore'])->name('admin.testimonials.restore'); // Tambahkan ini
+    Route::delete('/testimonials/{id}', [TestimonialController::class, 'destroy'])->name('admin.testimonials.destroy');
 });
 
 // Public API Routes untuk doctors

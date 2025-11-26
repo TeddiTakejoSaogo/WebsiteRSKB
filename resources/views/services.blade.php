@@ -16,10 +16,9 @@
                     <span class="badge bg-white text-primary fs-6 py-2 px-3">🚑 IGD 24 Jam</span>
                 </div>
             </div>
-            <div class="col-lg-6 text-center">
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Medical Services" class="img-fluid rounded-3 shadow-lg">
+           <div class="col-lg-4 text-lg-end">
+                <div class="hero-icon">
+                    <i class="fa-solid fa-comment-medical fa-8x opacity-75"></i>
                 </div>
             </div>
         </div>
