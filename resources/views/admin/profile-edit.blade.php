@@ -132,10 +132,10 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Twitter</label>
-                            <input type="url" name="twitter" class="form-control" 
-                                   value="{{ old('twitter', $profile->twitter) }}"
-                                   placeholder="https://twitter.com/username">
+                            <label class="form-label">Tiktok</label>
+                            <input type="url" name="tiktok" class="form-control" 
+                                   value="{{ old('tiktok', $profile->tiktok) }}"
+                                   placeholder="https://tiktok.com/username">
                         </div>
                         
                         <div class="col-md-6 mb-3">

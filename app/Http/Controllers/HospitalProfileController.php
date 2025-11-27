@@ -63,7 +63,7 @@ class HospitalProfileController extends Controller
             'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'facebook' => 'nullable|url|max:255',
             'instagram' => 'nullable|url|max:255',
-            'twitter' => 'nullable|url|max:255',
+            'tiktok' => 'nullable|url|max:255',
             'youtube' => 'nullable|url|max:255',
         ]);
 
@@ -85,7 +85,7 @@ class HospitalProfileController extends Controller
             $profile->history = $request->history;
             $profile->facebook = $request->facebook;
             $profile->instagram = $request->instagram;
-            $profile->twitter = $request->twitter;
+            $profile->tiktok = $request->tiktok;
             $profile->youtube = $request->youtube;
 
             // Handle logo upload

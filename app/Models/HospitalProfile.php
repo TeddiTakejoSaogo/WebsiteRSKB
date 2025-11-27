@@ -21,7 +21,7 @@ class HospitalProfile extends Model
         'logo',
         'facebook',
         'instagram',
-        'twitter',
+        'tiktok',
         'youtube'
     ];
 

@@ -18,10 +18,10 @@
     <meta name="description" content="@if(isset($hospitalProfile)){{ Str::limit($hospitalProfile->description, 160) }}@else{Rumah Sakit terpercaya dengan pelayanan kesehatan berkualitas.@endif">
     <style>
         :root {
-            --primary-color: #1f9970; /* Biru cerah yang lebih soft */
-            --primary-light: #38b4ac; /* Biru lebih terang */
+            --primary-color: #42a1db; /* Biru cerah yang lebih soft */
+            --primary-light: #69cae8; /* Biru lebih terang */
             --secondary-color: #eef5fc;
-            --success-color: #28A745; /* Hijau cerah */
+            --success-color: #68b4e2; /* Hijau cerah */
             --warning-color: #FFC107; /* Kuning cerah */
             --danger-color: #DC3545; /* Merah cerah */
             --info-color: #b81717; /* Biru tosca cerah */
@@ -51,13 +51,13 @@
         
         .navbar-nav .nav-link:hover,
         .navbar-nav .nav-link.active {
-            color: #2cccc4 !important; /* Gold untuk hover */
+            color: #24e4f1 !important; /* menu navbar */
             transform: translateY(-2px);
         }
         
         /* Hero Section dengan background cerah BG di beranda */
         .hero-section {
-            background: linear-gradient(135deg, rgba(248, 248, 248, 0.829) 0%, rgba(15, 153, 158, 0.9) 100%), 
+            background: linear-gradient(135deg, rgba(211, 240, 240, 0.829) 0%, rgba(25, 191, 212, 0.9) 100%), 
                         url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
@@ -337,8 +337,8 @@
                             </a>
                         @endif
                         @if(isset($hospitalProfile) && $hospitalProfile->twitter)
-                            <a href="{{ $hospitalProfile->twitter }}" class="text-light me-3" target="blank">
-                                <i class="fab fa-twitter fa-lg"></i>
+                            <a href="{{ $hospitalProfile->tiktok }}" class="text-light me-3" target="blank">
+                                <i class="fab fa-tiktok fa-lg"></i>
                             </a>
                         @endif
                         @if(isset($hospitalProfile) && $hospitalProfile->youtube)

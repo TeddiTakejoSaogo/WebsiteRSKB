@@ -20,7 +20,7 @@ class HospitalProfileSeeder extends Seeder
             'history' => 'Rumah Sakit Kami didirikan pada tahun 1990 dengan misi memberikan pelayanan kesehatan yang berkualitas kepada masyarakat. Selama lebih dari 30 tahun, kami telah berkembang menjadi rumah sakit terpercaya dengan fasilitas modern dan tim medis yang profesional.',
             'facebook' => 'https://facebook.com/rumahsakit',
             'instagram' => 'https://instagram.com/rumahsakit',
-            'twitter' => 'https://twitter.com/rumahsakit',
+            'tiktok' => 'https://tiktok.com/rumahsakit',
             'youtube' => 'https://youtube.com/rumahsakit',
         ]);
     }
