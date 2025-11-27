@@ -177,7 +177,7 @@
 <style>
 /* Hero Section */
 .services-hero {
-    background: linear-gradient(135deg, #1cccb4 0%, #93d1be 100%);
+    background: linear-gradient(135deg, #42a1db 0%, #36dbf8 100%);
     position: relative;
     overflow: hidden;
 }
@@ -205,7 +205,7 @@
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #0e808f 0%, #0d9b77 100%);
+    background: linear-gradient(135deg, #42a1db 0%, #f5f5f5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -234,7 +234,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(135deg, #6a6f83 0%, #0c915e 100%);
+    background: linear-gradient(135deg, #6a6f83 0%, #bed1ca 100%);
 }
 
 .shadow-hover {
@@ -256,7 +256,7 @@
     justify-content: center;
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #1eb891 0%, #10a372 100%);
+    background: linear-gradient(135deg, #42a1db 0%, #36dbf8 100%);
     border-radius: 20px;
     margin: 0 auto;x    
 }

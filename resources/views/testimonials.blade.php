@@ -263,7 +263,7 @@
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 10px 30px rgba(241, 243, 243, 0.1) !important;
 }
 
 .testimonial-text {
@@ -296,7 +296,7 @@
 }
 
 .bg-gradient-primary {
-    background: linear-gradient(135deg, #098652 0%, #108379 100%) !important;
+    background: linear-gradient(135deg, #42a1db 0%, #5bceeb 100%) !important;
 }
 
 /* Rating Input Styles */

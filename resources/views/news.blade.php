@@ -355,7 +355,7 @@
 }
 
 .bg-gradient-primary {
-    background: linear-gradient(135deg, #49a7a2 0%, #1da180 100%) !important;
+    background: linear-gradient(135deg, #42a1db 0%, #36dbf8 100%) !important;
 }
 
 .empty-state-icon {
