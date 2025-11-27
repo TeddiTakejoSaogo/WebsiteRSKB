@@ -336,7 +336,7 @@
                                 <i class="fab fa-instagram fa-lg"></i>
                             </a>
                         @endif
-                        @if(isset($hospitalProfile) && $hospitalProfile->twitter)
+                        @if(isset($hospitalProfile) && $hospitalProfile->tiktok)
                             <a href="{{ $hospitalProfile->tiktok }}" class="text-light me-3" target="blank">
                                 <i class="fab fa-tiktok fa-lg"></i>
                             </a>
