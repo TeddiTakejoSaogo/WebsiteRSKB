@@ -57,8 +57,8 @@
         
         /* Hero Section dengan background cerah BG di beranda */
         .hero-section {
-            background: linear-gradient(135deg, rgba(211, 240, 240, 0.829) 0%, rgba(25, 191, 212, 0.9) 100%), 
-                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(135deg, rgba(50, 245, 109, 0.575) 0%, rgba(25, 190, 212, 0.815) 100%), 
+                        url('{{ asset('storage/gallery/bgberandaa.jpeg') }}');
             background-size: cover;
             background-position: center;
             color: white;

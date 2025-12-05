@@ -109,7 +109,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <h1 class="display-4 mb-4 fw-bold">Selamat Datang di 
+                    <h1 class="display-4 mb-4 fw-bold">Selamat Datang di<br> 
                         @if(isset($hospitalProfile))
                             {{ $hospitalProfile->name }}
                         @else
@@ -117,11 +117,7 @@
                         @endif
                     </h1>
                     <p class="lead mb-4 fs-5">
-                        @if(isset($hospitalProfile) && $hospitalProfile->description)
-                            {{ Str::limit($hospitalProfile->description, 150) }}
-                        @else
-                            Memberikan pelayanan kesehatan terbaik dengan standar internasional dan tim medis profesional
-                        @endif
+                           "Profesional, Berintegritas, Responsif, dan Fokus Pada Keselamatan Pasien"
                     </p>
                     <div class="d-flex flex-wrap justify-content-center gap-3">
                         <a href="{{ route('services') }}" class="btn btn-primary btn-lg px-4 py-3">
@@ -139,7 +135,7 @@
                     <div class="row mt-5 pt-4">
                         <div class="col-md-3 col-6">
                             <div class="text-white">
-                                <h3 class="fw-bold mb-1">50+</h3>
+                                <h3 class="fw-bold mb-1">20+</h3>
                                 <small>Dokter Spesialis</small>
                             </div>
                         </div>
@@ -151,13 +147,13 @@
                         </div>
                         <div class="col-md-3 col-6">
                             <div class="text-white">
-                                <h3 class="fw-bold mb-1">100+</h3>
+                                <h3 class="fw-bold mb-1">12+</h3>
                                 <small>Kamar Rawat</small>
                             </div>
                         </div>
                         <div class="col-md-3 col-6">
                             <div class="text-white">
-                                <h3 class="fw-bold mb-1">30+</h3>
+                                <h3 class="fw-bold mb-1">35+</h3>
                                 <small>Tahun Pengalaman</small>
                             </div>
                         </div>
@@ -189,14 +185,14 @@
                         <div class="col-4">
                             <div class="border rounded p-3 bg-white">
                                 <i class="fas fa-user-md fa-2x text-primary mb-2"></i>
-                                <h5 class="mb-1">50+</h5>
+                                <h5 class="mb-1">20+</h5>
                                 <small class="text-muted">Dokter Spesialis</small>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="border rounded p-3 bg-white">
                                 <i class="fas fa-procedures fa-2x text-success mb-2"></i>
-                                <h5 class="mb-1">100+</h5>
+                                <h5 class="mb-1">12+</h5>
                                 <small class="text-muted">Kamar Rawat</small>
                             </div>
                         </div>
@@ -221,12 +217,12 @@
                                 class="img-fluid rounded shadow" 
                                 style="max-height: 400px; object-fit: cover;">
                         @else
-                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                            <img src="https://images.unsplash.com/photo-19494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
                                 alt="Rumah Sakit Kami" 
                                 class="img-fluid rounded shadow">
                         @endif
                         <div class="position-absolute bottom-0 start-0 bg-primary text-white p-3 rounded-end">
-                            <h5 class="mb-0"><i class="fas fa-award me-2"></i>Terpercaya Sejak 1990</h5>
+                            <h5 class="mb-0"><i class="fas fa-award me-2"></i>Terpercaya Sejak 1988</h5>
                         </div>
                     </div>
                 </div>
@@ -238,13 +234,111 @@
     <section class="py-5">
         <div class="container">
             <div class="row mb-5">
+                <div class="row mb-5">
+                <div class="col-12 text-center mb-4">
+                    <h3 class="mb-3">Dokter Spesialis</h3>
+                    <p class="text-muted">Dokter berpengalaman di bidangnya masing-masing</p>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                                 style="width: 80px; height: 80px;">
+                                 <i class="fas fa-lungs fa-2x text-white"></i>
+                            </div>
+                            <h5>Jantung</h5>
+                            <p class="text-muted mb-0">Spesialis Jantung</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-secondary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                                 style="width: 80px; height: 80px;">
+                                <i class="fas fa-heart fa-2x text-white"></i>
+                            </div>
+                            <h5>Bedah</h5>
+                            <p class="text-muted mb-0">Spesialis Bedah</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                                 style="width: 80px; height: 80px;">
+                                 <i class="fa-solid fa-person-dots-from-line fa-2x text-white"></i>
+                            </div>
+                            <h5>Penyakit Dalam</h5>
+                            <p class="text-muted mb-0">Spesialis Penyakit Dalam</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                                 style="width: 80px; height: 80px;">
+                                 <i class="fa-solid fa-head-side-mask fa-2x text-white"></i>
+                            </div>
+                            <h5>THT</h5>
+                            <p class="text-muted mb-0">Spesialis THT</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                                 style="width: 80px; height: 80px;">
+                                <i class="fa-solid fa-brain fa-2x text-white"></i>
+                            </div>
+                            <h5>Onkologi</h5>
+                            <p class="text-muted mb-0">Spesialis Onkologi</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                                 style="width: 80px; height: 80px;">
+                                <i class="fas fa-baby fa-2x text-white"></i>
+                            </div>
+                            <h5>Urologi</h5>
+                            <p class="text-muted mb-0">Spesialis Urologi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-info rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                                 style="width: 80px; height: 80px;">
+                                <i class="fa-solid fa-pills fa-2x text-white"></i>
+                            </div>
+                            <h5>Orthopedi</h5>
+                            <p class="text-muted mb-0">Spesialis Orthopedi</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
                 <div class="col-12 text-center">
                     <h2 class="display-5 mb-3">Akreditasi & Sertifikasi</h2>
                     <p class="lead">Bukti komitmen kami dalam memberikan pelayanan kesehatan terbaik dengan standar tertinggi</p>
                 </div>
             </div>
 
-            <div class="row">
+            {{-- <div class="row">
                 @foreach($accreditations as $accreditation)
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card accreditation-card shadow-sm border-0 h-100">
@@ -253,7 +347,7 @@
                                 <i class="{{ $accreditation['icon'] }} fa-3x text-primary"></i>
                             </div>
                             <div class="accreditation-badge mb-3">
-                                <span class="badge bg-success fs-6 px-3 py-2">{{ $accreditation['level'] }}</span>
+                                <span class="badge bg-primary fs-6 px-3 py-2">{{ $accreditation['level'] }}</span>
                             </div>
                             <h4 class="card-title mb-3">{{ $accreditation['title'] }}</h4>
                             <p class="card-text text-muted mb-3">{{ $accreditation['description'] }}</p>
@@ -264,7 +358,7 @@
                     </div>
                 </div>
                 @endforeach
-            </div>
+            </div> --}}
 
             <!-- Accreditation Details -->
             <div class="row mt-5">
@@ -325,7 +419,7 @@
                                                     <small class="text-muted">Pelayanan</small>
                                                 </div>
                                                 <div class="col-4">
-                                                    <h3 class="text-primary mb-1">100+</h3>
+                                                    <h3 class="text-primary mb-1">20+</h3>
                                                     <small class="text-muted">Dokter Spesialis</small>
                                                 </div>
                                             </div>
@@ -351,48 +445,78 @@
                 <div class="marquee-content">
                     <!-- Asuransi -->
                     <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/0056b3/ffffff?text=BPJS" alt="BPJS" class="img-fluid">
+                        <img src="{{ asset('storage/gallery/logo1 (1).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
                     </div>
                     <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/dc3545/ffffff?text=Allianz" alt="Allianz" class="img-fluid">
+                        <img src="{{ asset('storage/gallery/logo1 (2).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
                     </div>
                     <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/28a745/ffffff?text=Astra" alt="Astra" class="img-fluid">
+                        <img src="{{ asset('storage/gallery/logo1 (3).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
                     </div>
                     <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/ffc107/000000?text=Prudential" alt="Prudential" class="img-fluid">
+                        <img src="{{ asset('storage/gallery/logo1 (4).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
                     </div>
                     <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/6f42c1/ffffff?text=Manulife" alt="Manulife" class="img-fluid">
+                        <img src="{{ asset('storage/gallery/logo1 (5).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (6).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (7).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (8).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (9).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (10).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (11).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (12).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (13).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (14).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (15).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (16).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (17).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (18).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (19).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (20).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (21).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (22).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (23).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
+                    </div>
+                    <div class="partner-item">
+                        <img src="{{ asset('storage/gallery/logo1 (24).jpg') }}" style="max-height: 100px; object-fit: cover;" alt="BPJS" class="img-fluid">
                     </div>
                     
-                    <!-- Mitra Rumah Sakit -->
-                    <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/17a2b8/ffffff?text=RSUD" alt="RSUD" class="img-fluid">
-                    </div>
-                    <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/20c997/ffffff?text=RS.Premier" alt="RS Premier" class="img-fluid">
-                    </div>
-                    <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/fd7e14/ffffff?text=Medical+Ctr" alt="Medical Center" class="img-fluid">
-                    </div>
-                    
-                    <!-- Duplicate for seamless loop -->
-                    <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/0056b3/ffffff?text=BPJS" alt="BPJS" class="img-fluid">
-                    </div>
-                    <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/dc3545/ffffff?text=Allianz" alt="Allianz" class="img-fluid">
-                    </div>
-                    <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/28a745/ffffff?text=Astra" alt="Astra" class="img-fluid">
-                    </div>
-                    <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/ffc107/000000?text=Prudential" alt="Prudential" class="img-fluid">
-                    </div>
-                    <div class="partner-item">
-                        <img src="https://via.placeholder.com/150x80/6f42c1/ffffff?text=Manulife" alt="Manulife" class="img-fluid">
-                    </div>
                 </div>
             </div>
 

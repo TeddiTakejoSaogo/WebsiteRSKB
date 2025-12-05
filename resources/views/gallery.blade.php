@@ -143,7 +143,7 @@
 /* Hero Section */
 .hero-section-gallery {
     background: linear-gradient(135deg, rgba(66, 195, 235, 0.8), rgba(93, 218, 250, 0.8)), 
-                url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+                url('{{ asset('storage/gallery/bgabout.jpg') }}');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

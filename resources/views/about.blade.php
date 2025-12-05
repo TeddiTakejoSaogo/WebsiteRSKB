@@ -54,7 +54,7 @@
                                  style="width: 80px; height: 80px;">
                                 <i class="fas fa-user-md fa-2x text-primary"></i>
                             </div>
-                            <h3 class="text-primary mb-1">50+</h3>
+                            <h3 class="text-primary mb-1">20+</h3>
                             <p class="text-muted mb-0">Dokter Spesialis</p>
                         </div>
                     </div>
@@ -105,52 +105,58 @@
                 <div class="card-body p-5">
                     <div class="row">
                         <div class="col-12 text-center mb-4">
-                            <h3 class="mb-3">Fasilitas Unggulan Kami</h3>
-                            <p class="text-muted">Teknologi terkini untuk perawatan terbaik</p>
+                            <h3 class="mb-3">Pelayanan Kami</h3>
+                            <p class="text-muted">Lingkup Kegiatan RSK Bedah Ropanasuri</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4 mb-4">
                             <div class="d-flex">
                                 <div class="flex-shrink-0">
+                                     <i class="fas fa-ambulance fa-2x text-danger me-3"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5> INSTALASI GAWAT DARURAT (IGD) 24 JAM</h5>
+                                    <p class="text-muted mb-0">Instalasi Gawat Darurat RSK Bedah Ropanasuri melayani 24 jam kasus kegawatdaruratan 
+yang mengancam jiwa.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa-solid fa-hand-holding-medical fa-2x text-success me-3"></i>
+                                    {{-- <i class="fas fa-microscope fa-2x text-success me-3"></i> --}}
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5>PELAYANAN POLIKLINIK</h5>
+                                    <p class="text-muted mb-0">Pelayanan poliklinik RSK Bedah Ropanasuri memberikan pelayanan paripurna yang 
+didukung oleh dokter spesialis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa-solid fa-head-side-virus fa-2x text-info me-3"></i>
+                                    {{-- <i class="fas fa-x-ray fa-2x text-info me-3"></i> --}}
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5>INSTALASI BEDAH ANESTESI</h5>
+                                    <p class="text-muted mb-0">Pelayanan Kamar Operasi yang dilengkapi dengan peralatan yang sesuai standar akreditasi dan 
+didukung oleh tenaga medis dan paramedis yang kompeten dibidangnya.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
                                     <i class="fas fa-heartbeat fa-2x text-primary me-3"></i>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <h5>ICU & NICU</h5>
-                                    <p class="text-muted mb-0">Unit perawatan intensif dengan monitoring 24 jam</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-microscope fa-2x text-success me-3"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5>Laboratorium Modern</h5>
-                                    <p class="text-muted mb-0">Peralatan terbaru untuk diagnosis akurat</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-x-ray fa-2x text-info me-3"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5>Radiologi Digital</h5>
-                                    <p class="text-muted mb-0">Pencitraan medis dengan teknologi digital</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-ambulance fa-2x text-danger me-3"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5>IGD 24 Jam</h5>
-                                    <p class="text-muted mb-0">Layanan gawat darurat siap siaga</p>
+                                    <h5>PELAYANAN BEDAH MINOR</h5>
+                                    <p class="text-muted mb-0">Pelayanan Bedah Minor adalah pelayanan rawat jalan secara “One Day Care” yang 
+melakukan tindakan pembedahan ringan.</p>
                                 </div>
                             </div>
                         </div>
@@ -160,19 +166,60 @@
                                     <i class="fas fa-baby fa-2x text-warning me-3"></i>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <h5>Maternal & Neonatal</h5>
-                                    <p class="text-muted mb-0">Perawatan khusus ibu dan bayi</p>
+                                    <h5>PELAYANAN KEMOTERAPI</h5>
+                                    <p class="text-muted mb-0">Pelayanan modalitas terhadap Kanker (CA) / Tumor modalitas alternatif selain operasi 
+untuk kasus kanker CA/tumor pada pasien.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="d-flex">
                                 <div class="flex-shrink-0">
-                                    <i class="fas fa-brain fa-2x text-purple me-3"></i>
+                                    <i class="fa-solid fa-laptop-medical fa-2x text-info me-3"></i>
+                                    {{-- <i class="fas fa-baby fa-2x text-warning me-3"></i> --}}
                                 </div>
                                 <div class="flex-grow-1">
-                                    <h5>Neurosains</h5>
-                                    <p class="text-muted mb-0">Spesialisasi saraf dan otak</p>
+                                    <h5>INTENSI CARE UNIT (ICU)</h5>
+                                    <p class="text-muted mb-0">Fasilitas bagi pasien yang membutuhkan pengawasan, perawatan, dan pengobatan ketat karena 
+adanya penyakit atau kondisi tertentu yang mengancam jiwa.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa-solid fa-stethoscope fa-2x text-success me-3"></i>
+                                    {{-- <i class="fas fa-baby fa-2x text-warning me-3"></i> --}}
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5> PENUNJANG MEDIS</h5>
+                                    <p class="text-muted mb-0">RSK Bedah Ropanasuri menyediakan pelayanan penunjang medis maupun non medis guna 
+mendukung terciptanya pelayanan bedah yang bermutu.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa-solid fa-user-doctor fa-2x text-info me-3"></i>
+                                    {{-- <i class="fas fa-baby fa-2x text-warning me-3"></i> --}}
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5>DOKTER SPESIALIS</h5>
+                                    <p class="text-muted mb-0">Pelayanan paripurna yang 
+didukung oleh dokter spesialis, dokter subspesialis, dokter umum dan terapis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa-solid fa-bed-pulse fa-2x text-purple me-3"></i>
+                                    {{-- <i class="fas fa-brain fa-2x text-purple me-3"></i> --}}
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5>PELAYANAN RAWAT INAP</h5>
+                                    <p class="text-muted mb-0">fasilitas medis yang dirancang khusus untuk pasien yang memerlukan pengawasan, perawatan, dan pemulihan medis semalaman atau untuk jangka waktu yang lebih lama.</p>
                                 </div>
                             </div>
                         </div>
@@ -181,12 +228,25 @@
             </div>
 
             <!-- Section: Tim Dokter Spesialis -->
-            <div class="row mb-5">
+            {{-- <div class="row mb-5">
                 <div class="col-12 text-center mb-4">
-                    <h3 class="mb-3">Tim Dokter Spesialis</h3>
+                    <h3 class="mb-3">Dokter Spesialis</h3>
                     <p class="text-muted">Dokter berpengalaman di bidangnya masing-masing</p>
                 </div>
                 
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                                 style="width: 80px; height: 80px;">
+                                <i class="fas fa-heart fa-2x text-white"></i>
+                            </div>
+                            <h5>Kardiologi</h5>
+                            <p class="text-muted mb-0">Spesialis Jantung</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-3 mb-4">
                     <div class="card border-0 shadow-sm h-100 text-center">
                         <div class="card-body">
@@ -238,7 +298,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Section: Visi & Misi -->
             <div class="row mb-5">
@@ -294,7 +354,7 @@
             </div>
 
             <!-- Section: Penghargaan & Sertifikasi -->
-            <div class="card shadow-sm mb-5">
+            {{-- <div class="card shadow-sm mb-5">
                 <div class="card-body p-5">
                     <div class="row align-items-center">
                         <div class="col-md-8">
@@ -348,7 +408,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Section: Lokasi & Kontak -->
             <div class="card shadow-sm">

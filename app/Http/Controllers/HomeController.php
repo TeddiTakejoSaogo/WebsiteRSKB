@@ -35,22 +35,22 @@ class HomeController extends Controller
             'image' => 'accreditation-1.jpg',
             'icon' => 'fas fa-award'
         ],
-        [
-            'title' => 'Akreditasi Internasional',
-            'level' => 'JCI Certified',
-            'year' => '2023',
-            'description' => 'Sertifikasi Joint Commission International untuk standar pelayanan kesehatan bertaraf internasional.',
-            'image' => 'accreditation-2.jpg',
-            'icon' => 'fas fa-globe'
-        ],
-        [
-            'title' => 'Hospital Safety',
-            'level' => 'Grade A',
-            'year' => '2024',
-            'description' => 'Penilaian keselamatan rumah sakit dengan predikat tertinggi untuk keamanan pasien dan lingkungan.',
-            'image' => 'accreditation-3.jpg',
-            'icon' => 'fas fa-shield-alt'
-        ]
+        // [
+        //     'title' => 'Akreditasi Internasional',
+        //     'level' => 'JCI Certified',
+        //     'year' => '2023',
+        //     'description' => 'Sertifikasi Joint Commission International untuk standar pelayanan kesehatan bertaraf internasional.',
+        //     'image' => 'accreditation-2.jpg',
+        //     'icon' => 'fas fa-globe'
+        // ],
+        // [
+        //     'title' => 'Hospital Safety',
+        //     'level' => 'Grade A',
+        //     'year' => '2024',
+        //     'description' => 'Penilaian keselamatan rumah sakit dengan predikat tertinggi untuk keamanan pasien dan lingkungan.',
+        //     'image' => 'accreditation-3.jpg',
+        //     'icon' => 'fas fa-shield-alt'
+        // ]
     ];
         return view('home', [
             'hospitalProfile' => $this->hospitalProfile,

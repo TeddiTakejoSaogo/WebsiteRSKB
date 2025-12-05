@@ -22,9 +22,8 @@
                     </div>
                     <h5>Alamat</h5>
                     <p class="text-muted">
-                       Jl. Aur No.8, Ujung Gurun <br>
-                    Kec. Padang Bar.,<br> 
-                    Kota Padang, Sumatera Barat 25142
+                       Jl. Aur No.8 Ujung Gurun <br>
+                    Kota Padang, Sumatera Barat 25114
                     </p>
                 </div>
             </div>
@@ -39,8 +38,8 @@
                     </div>
                     <h5>Telepon</h5>
                     <p class="text-muted">
-                        (021) 123-4567<br>
-                        (021) 123-4568<br>
+                        (0751) 31938<br>
+                        (0751) 33854<br>
                         <strong>IGD: 119</strong>
                     </p>
                 </div>
@@ -56,8 +55,7 @@
                     </div>
                     <h5>Email & Media Sosial</h5>
                     <p class="text-muted">
-                        info@rumahsakit.com<br>
-                        admin@rumahsakit.com<br>
+                        rskbropanasuripadang@gmail.com<br>
                         <div class="mt-2">
                             <a href="#" class="text-primary me-3"><i class="fab fa-facebook fa-lg"></i></a>
                             <a href="#" class="text-info me-3"><i class="fab fa-twitter fa-lg"></i></a>
@@ -104,11 +102,11 @@
                                 <label for="subject" class="form-label">Subjek *</label>
                                 <select class="form-select" id="subject" name="subject" required>
                                     <option value="">Pilih Subjek</option>
-                                    <option value="appointment" {{ old('subject') == 'appointment' ? 'selected' : '' }}>Janji Temu Dokter</option>
-                                    <option value="information" {{ old('subject') == 'information' ? 'selected' : '' }}>Informasi Layanan</option>
-                                    <option value="complaint" {{ old('subject') == 'complaint' ? 'selected' : '' }}>Keluhan & Saran</option>
-                                    <option value="partnership" {{ old('subject') == 'partnership' ? 'selected' : '' }}>Kemitraan</option>
-                                    <option value="other" {{ old('subject') == 'other' ? 'selected' : '' }}>Lainnya</option>
+                                    <option value="Janji Temu Dokter" {{ old('subject') == 'JTM' ? 'selected' : '' }}>Janji Temu Dokter</option>
+                                    <option value="Informasi Layanan" {{ old('subject') == 'IL'? 'selected' : '' }}>Informasi Layanan</option>
+                                    <option value="Keluhan & Saran" {{ old('subject') == 'Kesan' ? 'selected' : '' }}>Keluhan & Saran</option>
+                                    <option value="Kemitraan" {{ old('subject') == 'Kemitraan' ? 'selected' : '' }}>Kemitraan</option>
+                                    <option value="Lainnya" {{ old('subject') == 'Lainnya' ? 'selected' : '' }}>Lainnya</option>
                                 </select>
                                 <div class="invalid-feedback">Harap pilih subjek</div>
                             </div>
@@ -243,7 +241,7 @@
                             </h2>
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Anda dapat membuat janji temu melalui telepon (021) 123-4567, 
+                                    Anda dapat membuat janji temu melalui telepon (0751) 31938, 
                                     melalui form di website, atau datang langsung ke rumah sakit.
                                 </div>
                             </div>
